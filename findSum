@@ -1,0 +1,24 @@
+using System;
+
+public static class Kata
+{
+  
+  public static int DiagonalSum(int[,] matrix)
+  {
+  
+    double length = Math.Sqrt(matrix.Length);
+    int result = 0;
+    
+    for (int i = 0; i < length; i++)
+    {
+      for (int j = 0; j < length; j++)
+      {
+        if (matrix[i,j] == matrix[i,i])
+        {
+        result = result + matrix [i,i];
+        }
+      }
+    }
+    return result;
+  }
+}
